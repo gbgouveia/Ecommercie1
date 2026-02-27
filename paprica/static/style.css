@@ -1,0 +1,468 @@
+/* =======================================================
+   CORES PADRÃO DO SISTEMA
+======================================================= */
+
+:root {
+  --bege-principal: #f1ead8;
+  --bege-secundario: #e4d6c1;
+  --verde-principal: #094f2e;
+  --verde-hover: #0c6b3e;
+  --marrom-destaque: #8b5e34;
+}
+
+/* =======================================================
+   BODY PADRÃO
+======================================================= */
+.body-principal {
+  background-color:#ece6d7 ;
+  min-height: 100vh;
+}
+
+.custom-body {
+  background-color: #f1eee6 !important;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* =======================================================
+   NOVA NAVBAR (ESTILO MARKETPLACE)
+======================================================= */
+
+/* NAV SUPERIOR */
+.top-navbar {
+  background-color: var(--bege-principal);
+  padding: 15px 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo-navbar {
+  height: 75px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ================== BUSCA CENTRAL ================== */
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-wrapper {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  align-items: center;
+  background-color: #fffaf0;
+  border-radius: 50px;
+  border: 1px solid var(--verde-principal);
+  overflow: hidden;
+}
+
+.search-wrapper input {
+  flex: 1;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+}
+
+.search-wrapper button {
+  border: none;
+  background: transparent;
+  padding: 0 20px;
+  color: var(--verde-principal);
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.search-wrapper button:hover {
+  color: var(--verde-hover);
+}
+
+/* ================== DIREITA ================== */
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-item-custom {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--verde-principal);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.nav-item-custom i {
+  font-size: 20px;
+}
+
+.nav-item-custom:hover {
+  color: var(--verde-hover);
+}
+
+/* ================== LINHA VERDE ================== */
+
+.green-line {
+  height: 3px;
+  background-color: var(--verde-principal);
+}
+
+/* ================== NAV CATEGORIAS ================== */
+
+.category-navbar {
+  background-color: var(--bege-principal);
+  padding: 12px 40px;
+  border-bottom: 1px solid #dccfbf;
+  align-items: center; 
+  justify-content: center;
+}
+
+.category-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  font-weight: 500;
+}
+
+.category-container a,
+.category-item {
+  text-decoration: none;
+  color: var(--verde-principal);
+  transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.category-container a:hover,
+.category-item:hover {
+  color: var(--verde-hover);
+}
+
+/* ================== RESPONSIVO NAV ================== */
+
+@media (max-width: 991px) {
+
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-right {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .category-container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .search-wrapper {
+    max-width: 100%;
+  }
+
+  .logo-navbar {
+    height: 60px;
+  }
+}
+
+/* =======================================================
+   TABELA DE PRODUTOS
+======================================================= */
+
+#table {
+  background-color: var(--bege-principal) !important;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+#table thead th {
+  background-color:#f1ead8 !important;
+  color: var(--verde-principal);
+  font-weight: 600;
+  padding: 14px;
+}
+
+#table th,
+#table td {
+  background-color: #fffaf0 !important;
+  color: var(--verde-principal);
+  padding: 14px;
+  border-color: #dccfbf;
+}
+
+#table tbody tr:hover {
+  background-color: #f7efe4 !important;
+  transition: 0.2s ease;
+}
+
+#table td:nth-child(4) {
+  font-weight: bold;
+  color: var(--verde-hover);
+}
+
+#table td:last-child {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#table .btn-info {
+  background: #e9ddcc;
+  border: 1px solid #d6c7b2;
+  color: var(--verde-principal);
+  border-radius: 10px;
+  padding: 6px 14px;
+  transition: 0.2s ease;
+}
+
+#table .btn-info:hover {
+  background: #dccfbf;
+}
+
+#table .btn:last-child {
+  background: var(--verde-principal);
+  color: white;
+  border-radius: 10px;
+  padding: 6px 14px;
+  transition: 0.2s ease;
+}
+
+#table .btn:last-child:hover {
+  background: var(--verde-hover);
+}
+
+/* =======================================================
+   CADASTRO
+======================================================= */
+
+.cadastro-page {
+  background-color: #f1ead8;
+}
+
+.cadastro-wrapper {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.conteiner {
+  background: #f1ead8;
+  padding: 30px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 650px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.10);
+}
+
+.conteiner h1 {
+  color: #094f2e;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.conteiner label {
+  font-weight: 500;
+  color: #094f2e;
+  margin-top: 10px;
+}
+
+.conteiner .form-control {
+  border-radius: 10px;
+  border: 1px solid #d6c7b2;
+  background-color: #f1ead8;
+  padding: 10px;
+  margin-bottom: 12px;
+  transition: 0.2s ease;
+}
+
+.conteiner .form-control:focus {
+  border-color: var(--marrom-destaque);
+  box-shadow: 0 0 0 3px rgba(139, 94, 52, 0.2);
+  background-color: white;
+}
+
+.conteiner .btn-success {
+  background-color: var(--marrom-destaque);
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.conteiner .btn-success:hover {
+  background-color: #6f4a27;
+  transform: translateY(-2px);
+}
+
+.form-logo {
+  width: 212px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1px auto;
+}
+
+/* =======================================================
+   MARKETPLACE CARDS
+======================================================= */
+
+.product-card {
+  border: none;
+  border-radius: 18px;
+  background-color: #f1ead8;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+.product-card .card-title {
+  color: var(--verde-principal);
+  font-weight: 600;
+}
+
+.preco {
+  color: var(--verde-hover);
+  font-weight: bold;
+}
+
+.btn-comprar {
+  background-color: var(--verde-principal);
+  color: white;
+  border-radius: 12px;
+  padding: 8px;
+  transition: 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: var(--verde-hover);
+  transform: scale(1.03);
+}
+
+/* =======================================================
+   PERFIL USUÁRIO
+======================================================= */
+
+.profile-card {
+  border-radius: 20px;
+  background-color: #f1ead8;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  border: none;
+}
+
+.profile-card p {
+  font-size: 16px;
+  color: var(--verde-principal);
+}
+
+.profile-card h3 {
+  color: var(--verde-principal);
+  font-weight: 600;
+}
+
+/* =======================================================
+   Responsividade
+======================================================= */
+
+@media (max-width: 991px) {
+
+  /* Navbar mais compacta */
+  .top-navbar {
+    padding: 15px 15px;
+  }
+
+  /* Centraliza tudo em coluna */
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Logo menor e central */
+  .logo-navbar {
+    height: 55px;
+  }
+
+  /* Busca ocupa largura total */
+  .nav-center {
+    width: 100%;
+  }
+
+  .search-wrapper {
+    max-width: 100%;
+  }
+
+  /* Ícones organizados como app */
+  .nav-right {
+    width: 100%;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  /* Esconde textos e deixa só ícones */
+  .nav-item-custom span {
+    display: none;
+  }
+
+}
+@media (max-width: 991px) {
+
+  .category-navbar {
+    padding: 10px 10px;
+  }
+
+  .category-container {
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 25px;
+    scrollbar-width: none;
+  }
+
+  .category-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-container a {
+    flex: 0 0 auto;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .product-card {
+    border-radius: 14px;
+  }
+
+  .product-card:hover {
+    transform: none;
+  }
+
+}

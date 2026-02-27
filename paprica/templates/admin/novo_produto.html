@@ -1,0 +1,46 @@
+{% extends "admin/base_admin.html" %}
+
+{% block conteudos %}
+
+<div class="container mt-4">
+    <h2>Novo Produto</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+
+        <div class="mb-3">
+            {{ form.nome.label(class="form-label") }}
+            {{ form.nome(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.preco.label(class="form-label") }}
+            {{ form.preco(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.cod_barra.label(class="form-label") }}
+            {{ form.cod_barra(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.descricao.label(class="form-label") }}
+            {{ form.descricao(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.estoque.label(class="form-label") }}
+            {{ form.estoque(class="form-control") }}
+        </div>
+
+        <!-- 🔥 CAMPO DE IMAGEM -->
+        <div class="mb-3">
+            {{ form.imagem.label(class="form-label") }}
+            {{ form.imagem(class="form-control") }}
+        </div>
+
+        {{ form.submit(class="btn btn-success") }}
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Produtos
+{% endblock %}
+
+{% block conteudos %}
+
+<div class="container py-5">
+
+  <h2 class="letras text-center mb-4">Nossos Produtos</h2>
+
+  <div class="row g-4">
+
+    {% for item in itens %}
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      
+      <div class="card product-card h-100">
+
+        <!-- IMAGEM DO PRODUTO -->
+        {% if item.imagem %}
+          <img src="{{ url_for('static', filename='produtos/' + item.imagem) }}"
+               class="card-img-top"
+               style="height:220px; object-fit:cover;">
+        {% else %}
+          <img src="{{ url_for('static', filename='image/sem-imagem.png') }}"
+               class="card-img-top"
+               style="height:220px; object-fit:cover;">
+        {% endif %}
+
+        <div class="card-body d-flex flex-column">
+
+          <h5 class="card-title">{{ item.nome }}</h5>
+
+          <p class="card-text text-muted small">
+            {{ item.descricao }}
+          </p>
+
+          <div class="mt-auto">
+
+            <h4 class="preco">
+              R$ {{ item.preco }}
+            </h4>
+
+            <a href="#"
+               class="btn btn-comprar w-100 mt-2">
+               Comprar
+            </a>
+
+            <a href="{{ url_for('adicionar_carrinho', item_id=item.id) }}" 
+               class="btn btn-primary w-100 mt-2">
+               Adicionar ao Carrinho
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    {% endfor %}
+
+  </div>
+
+</div>
+
+{% endblock %}

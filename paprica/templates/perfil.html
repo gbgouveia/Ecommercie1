@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Perfil
+{% endblock %}
+
+{% block conteudos %}
+
+<div class="container py-5">
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+
+      <div class="card profile-card p-4">
+
+        <h3 class="text-center mb-4">
+          Perfil do Usuário
+        </h3>
+
+        <hr>
+
+        <p><strong>Usuário:</strong> {{ current_user.usuario }}</p>
+        <p><strong>Email:</strong> {{ current_user.email }}</p>
+        <p><strong>Saldo:</strong> R$ {{ current_user.valor }}</p>
+
+        <hr>
+
+        <h5>Produtos Comprados:</h5>
+
+        {% if itens %}
+          <ul class="list-group mt-3">
+            {% for item in itens %}
+              <li class="list-group-item d-flex justify-content-between">
+                {{ item.nome }}
+                <span>R$ {{ item.preco }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="text-muted mt-3">Nenhum produto comprado ainda.</p>
+        {% endif %}
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
