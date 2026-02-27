@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+
+{%block titulo%}
+  Cadastro
+{%endblock%}
+
+{%block conteudos%}
+<div class="cadastro-wrapper">
+  <div class="conteiner">
+    <img class="form-logo" src="{{ url_for('static', filename='image/Logo_Cadastro.png') }}">
+    <h1 class="h3 mb-3 ">
+      Por Favor, Crie a sua Conta
+    </h1>
+    <form method="post" class="form-register">
+
+      {{form.hidden_tag()}}
+
+      {{form.usuario.label()}}
+      {{form.usuario(class="form-control", placeholder="Informe o Userneme")}}
+
+      {{form.email.label()}}
+      {{form.email(class="form-control", placeholder="Informe o seu E-Mail")}}
+
+      {{form.senha1.label()}}
+      {{form.senha1(class="form-control", placeholder="Informe a Senha")}}
+
+      {{form.senha2.label()}}
+      {{form.senha2(class="form-control", placeholder="Confirme a Senha")}}
+      <br>
+      <div class="d-grid">
+        {{form.submit(class="btn btn-lg btn-success")}}
+      </div>
+    </form>
+  </div>
+</div>
+{%endblock%}
+
+

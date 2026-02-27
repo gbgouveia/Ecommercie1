@@ -1,0 +1,44 @@
+{% extends "admin/base_admin.html" %}
+
+{% block titulo %}
+Produtos
+{% endblock %}
+
+{% block conteudos %}
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between mb-3">
+        <h2>📦 Produtos</h2>
+        <a href="{{ url_for('admin.novo_produto') }}" class="btn btn-success">
+            + Novo Produto
+        </a>
+    </div>
+
+    <table class="table table-striped shadow-sm">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in itens %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.nome }}</td>
+                <td>R$ {{ item.preco }}</td>
+                <td>
+                    <a href="{{ url_for('admin.editar_produto', id=item.id) }}" class="btn btn-sm btn-warning">Editar</a>
+                    <a href="{{ url_for('admin.excluir_produto', id=item.id) }}" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}
