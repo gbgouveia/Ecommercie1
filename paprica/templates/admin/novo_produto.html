@@ -5,7 +5,11 @@
 <div class="container mt-4">
     <h2>Novo Produto</h2>
 
+<<<<<<< HEAD
     <form method="POST" enctype="multipart/form-data">
+=======
+    <form method="POST">
+>>>>>>> bddf3c62ea14cce2f4f6ed5bb23ac4a5cba79c4a
         {{ form.hidden_tag() }}
 
         <div class="mb-3">
@@ -18,6 +22,10 @@
             {{ form.preco(class="form-control") }}
         </div>
 
+<<<<<<< HEAD
+=======
+        <!-- 🔥 CAMPO QUE ESTAVA FALTANDO -->
+>>>>>>> bddf3c62ea14cce2f4f6ed5bb23ac4a5cba79c4a
         <div class="mb-3">
             {{ form.cod_barra.label(class="form-label") }}
             {{ form.cod_barra(class="form-control") }}
@@ -33,12 +41,15 @@
             {{ form.estoque(class="form-control") }}
         </div>
 
+<<<<<<< HEAD
         <!-- 🔥 CAMPO DE IMAGEM -->
         <div class="mb-3">
             {{ form.imagem.label(class="form-label") }}
             {{ form.imagem(class="form-control") }}
         </div>
 
+=======
+>>>>>>> bddf3c62ea14cce2f4f6ed5bb23ac4a5cba79c4a
         {{ form.submit(class="btn btn-success") }}
     </form>
 </div>

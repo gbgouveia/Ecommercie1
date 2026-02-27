@@ -2,12 +2,16 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> bddf3c62ea14cce2f4f6ed5bb23ac4a5cba79c4a
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///paprica.db"
 app.config["SECRET_KEY"] = '8697d8a1ec77e8c9b434ae5a'
 
+<<<<<<< HEAD
 import os
 from werkzeug.utils import secure_filename
 
@@ -16,6 +20,8 @@ BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 UPLOAD_FOLDER = os.path.join(BASE_DIR, 'paprica/static/uploads')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+=======
+>>>>>>> bddf3c62ea14cce2f4f6ed5bb23ac4a5cba79c4a
 db = SQLAlchemy(app)
 
 login_manager = LoginManager()

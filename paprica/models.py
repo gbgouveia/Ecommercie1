@@ -55,6 +55,7 @@ class ItemPedido(db.Model):
     pedido = db.relationship('Pedido', backref='itens')
     produto = db.relationship('Item')
 
+<<<<<<< HEAD
 class Carrinho(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     usuario_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
@@ -63,3 +64,5 @@ class Carrinho(db.Model):
 
     item = db.relationship('Item')
     usuario = db.relationship('User')
+=======
+>>>>>>> bddf3c62ea14cce2f4f6ed5bb23ac4a5cba79c4a

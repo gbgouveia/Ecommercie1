@@ -1,6 +1,10 @@
 from paprica import app
 from flask import render_template, redirect, url_for, flash
+<<<<<<< HEAD
 from paprica.models import Item,User, Carrinho, Pedido, ItemPedido
+=======
+from paprica.models import Item,User
+>>>>>>> bddf3c62ea14cce2f4f6ed5bb23ac4a5cba79c4a
 from paprica.forms import CadastroForm
 from paprica import db
 from flask_login import login_user, logout_user, login_required, current_user
@@ -68,6 +72,7 @@ def page_perfil():
     itens_comprados = Item.query.filter_by(dono=current_user.id).all()
     return render_template("perfil.html", itens=itens_comprados)
 
+<<<<<<< HEAD
 @app.route('/adicionar_carrinho/<int:item_id>')
 @login_required
 def adicionar_carrinho(item_id):
@@ -98,3 +103,5 @@ def ver_carrinho():
     itens = Carrinho.query.filter_by(usuario_id=current_user.id).all()
     return render_template("carrinho.html", itens=itens)
 
+=======
+>>>>>>> bddf3c62ea14cce2f4f6ed5bb23ac4a5cba79c4a

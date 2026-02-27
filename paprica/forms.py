@@ -1,8 +1,14 @@
 from flask_wtf import FlaskForm
+<<<<<<< HEAD
 from wtforms import StringField, PasswordField, SubmitField, FloatField, IntegerField, TextAreaField, FileField
 from wtforms.validators import Length, EqualTo, Email, DataRequired, ValidationError
 from paprica.models import User
 from flask_wtf.file import FileAllowed
+=======
+from wtforms import StringField, PasswordField, SubmitField, FloatField, IntegerField
+from wtforms.validators import Length, EqualTo, Email, DataRequired, ValidationError
+from paprica.models import User
+>>>>>>> bddf3c62ea14cce2f4f6ed5bb23ac4a5cba79c4a
 
 class CadastroForm(FlaskForm):
     def validate_username(self, check_user):
@@ -29,6 +35,7 @@ class LoginForm(FlaskForm):
     senha = PasswordField(label='Senha: ', validators=[DataRequired()])
     submit = SubmitField(label='Entrar')
 
+<<<<<<< HEAD
 class ProdutoForm(FlaskForm):
     nome = StringField("Nome", validators=[DataRequired()])
     preco = IntegerField("Preço", validators=[DataRequired()])
@@ -42,3 +49,15 @@ class ProdutoForm(FlaskForm):
     )
 
     submit = SubmitField("Salvar")
+=======
+
+
+
+class ProdutoForm(FlaskForm):
+    nome = StringField("Nome", validators=[DataRequired()])
+    preco = IntegerField("Preço", validators=[DataRequired()])
+    cod_barra = StringField("Código de Barras", validators=[DataRequired()])
+    descricao = StringField("Descrição", validators=[DataRequired()])
+    estoque = IntegerField("Estoque")
+    submit = SubmitField("Cadastrar")
+>>>>>>> bddf3c62ea14cce2f4f6ed5bb23ac4a5cba79c4a
